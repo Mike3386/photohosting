@@ -1,1 +1,1 @@
-Project photohostung? for my practice in ITechArt
+Project photohosting for my practice in ITechArt
