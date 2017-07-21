@@ -1,0 +1,679 @@
+2017-07-21T00:00:07.8829571+03:00  [INF] Executed DbCommand (75ms) [Parameters=[@__adminRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__adminRoleName_0 (6438bdd5)
+2017-07-21T00:00:08.0308494+03:00  [INF] Executed DbCommand (4ms) [Parameters=[@__userRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__userRoleName_0 (6438bdd5)
+2017-07-21T00:00:08.0689520+03:00  [INF] Executed DbCommand (0ms) [Parameters=[@__adminEmail_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__adminEmail_0 (6438bdd5)
+2017-07-21T00:00:08.1682153+03:00  [INF] User profile is available. Using '"C:\Users\MikeY700\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-07-21T00:00:08.7744959+03:00 0HL6FM971RRD5 [INF] Request starting HTTP/1.1 GET http://localhost:7694/index.html   (e5be5b71)
+2017-07-21T00:00:08.7754986+03:00 0HL6FM971RRD6 [INF] Request starting HTTP/1.1 DEBUG http://localhost:7694/  0 (e5be5b71)
+2017-07-21T00:00:08.9636683+03:00 0HL6FM971RRD5 [INF] The file "/index.html" was not modified (f1f8d725)
+2017-07-21T00:00:08.9762028+03:00 0HL6FM971RRD6 [INF] Request finished in 242.5033ms 200  (15c52c40)
+2017-07-21T00:00:09.0062738+03:00 0HL6FM971RRD5 [INF] Request finished in 281.643ms 304 text/html (15c52c40)
+2017-07-21T00:00:09.0178044+03:00 0HL6FM971RRD7 [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/13   (e5be5b71)
+2017-07-21T00:00:09.4815822+03:00 0HL6FM971RRD7 [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:00:09.6169325+03:00 0HL6FM971RRD7 [INF] Executed DbCommand (23ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:00:09.6545242+03:00 0HL6FM971RRD7 [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 308.0829ms (afa2e885)
+2017-07-21T00:00:09.7427562+03:00 0HL6FM971RRD7 [ERR] Connection id ""0HL6FM970B8AO"": An unhandled exception was thrown by the application. (8c14976b)
+System.InvalidOperationException: Cannot return null from an action method with a return type of 'Microsoft.AspNetCore.Mvc.FileStreamResult'.
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__27.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Internal.Http.Frame`1.<RequestProcessingAsync>d__2.MoveNext()
+2017-07-21T00:00:09.7497757+03:00 0HL6FM971RRD7 [INF] Request finished in 732.1604ms 500  (15c52c40)
+2017-07-21T00:00:14.0256433+03:00 0HL6FM971RRD8 [INF] Request starting HTTP/1.1 POST http://localhost:7694/api/images multipart/form-data; boundary=----WebKitFormBoundaryKO2PCZBIsC43vG6l 599475 (e5be5b71)
+2017-07-21T00:00:14.1378421+03:00 0HL6FM971RRD8 [INF] Executing action method "Photohosting.Controllers.ImagesController.Post (Photohosting)" with arguments (["Microsoft.AspNetCore.Http.Internal.FormFile"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:00:14.1578781+03:00 0HL6FM971RRD8 [INF] Executed DbCommand (4ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:00:14.1855660+03:00 0HL6FM971RRD8 [INF] Executed action "Photohosting.Controllers.ImagesController.Post (Photohosting)" in 149.0123ms (afa2e885)
+2017-07-21T00:00:14.1950945+03:00 0HL6FM971RRD8 [INF] Request finished in 169.0095ms 200  (15c52c40)
+2017-07-21T00:02:02.2366586+03:00 0HL6FM971RRD9 [INF] Request starting HTTP/1.1 GET http://localhost:7694/index.html   (e5be5b71)
+2017-07-21T00:02:22.2170394+03:00  [INF] Executed DbCommand (78ms) [Parameters=[@__adminRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__adminRoleName_0 (6438bdd5)
+2017-07-21T00:02:22.3871864+03:00  [INF] Executed DbCommand (8ms) [Parameters=[@__userRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__userRoleName_0 (6438bdd5)
+2017-07-21T00:02:22.4543735+03:00  [INF] Executed DbCommand (1ms) [Parameters=[@__adminEmail_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__adminEmail_0 (6438bdd5)
+2017-07-21T00:02:22.5756907+03:00  [INF] User profile is available. Using '"C:\Users\MikeY700\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-07-21T00:02:23.2077792+03:00 0HL6FMAF3TKDB [INF] Request starting HTTP/1.1 DEBUG http://localhost:7694/  0 (e5be5b71)
+2017-07-21T00:02:23.2077792+03:00 0HL6FMAF3TKDA [INF] Request starting HTTP/1.1 GET http://localhost:7694/index.html   (e5be5b71)
+2017-07-21T00:02:23.4164309+03:00 0HL6FMAF3TKDA [INF] Sending file. Request path: '"/index.html"'. Physical path: '"d:\documents\visual studio 2017\Projects\photohosting\photohosting\wwwroot\index.html"' (27b0a520)
+2017-07-21T00:02:23.4264568+03:00 0HL6FMAF3TKDB [INF] Request finished in 262.8739ms 200  (15c52c40)
+2017-07-21T00:02:23.4813412+03:00 0HL6FMAF3TKDA [INF] Request finished in 323.9213ms 200 text/html (15c52c40)
+2017-07-21T00:02:23.5003923+03:00 0HL6FMAF3TKDC [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/13   (e5be5b71)
+2017-07-21T00:02:24.0178119+03:00 0HL6FMAF3TKDC [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:02:24.1571982+03:00 0HL6FMAF3TKDC [INF] Executed DbCommand (22ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:02:24.1953162+03:00 0HL6FMAF3TKDC [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 340.0371ms (afa2e885)
+2017-07-21T00:02:24.2745451+03:00 0HL6FMAF3TKDC [ERR] Connection id ""0HL6FMAF24UON"": An unhandled exception was thrown by the application. (8c14976b)
+System.InvalidOperationException: Cannot return null from an action method with a return type of 'Microsoft.AspNetCore.Mvc.FileStreamResult'.
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__27.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Internal.Http.Frame`1.<RequestProcessingAsync>d__2.MoveNext()
+2017-07-21T00:02:24.2825961+03:00 0HL6FMAF3TKDC [INF] Request finished in 780.5362ms 500  (15c52c40)
+2017-07-21T00:03:14.1005178+03:00  [INF] Executed DbCommand (95ms) [Parameters=[@__adminRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__adminRoleName_0 (6438bdd5)
+2017-07-21T00:03:14.2349231+03:00  [INF] Executed DbCommand (3ms) [Parameters=[@__userRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__userRoleName_0 (6438bdd5)
+2017-07-21T00:03:14.2810478+03:00  [INF] Executed DbCommand (1ms) [Parameters=[@__adminEmail_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__adminEmail_0 (6438bdd5)
+2017-07-21T00:03:14.3682779+03:00  [INF] User profile is available. Using '"C:\Users\MikeY700\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-07-21T00:03:14.8325262+03:00 0HL6FMAUG8886 [INF] Request starting HTTP/1.1 DEBUG http://localhost:7694/  0 (e5be5b71)
+2017-07-21T00:03:14.8325262+03:00 0HL6FMAUG8887 [INF] Request starting HTTP/1.1 GET http://localhost:7694/index.html   (e5be5b71)
+2017-07-21T00:03:15.0210376+03:00 0HL6FMAUG8887 [INF] The file "/index.html" was not modified (f1f8d725)
+2017-07-21T00:03:15.0342880+03:00 0HL6FMAUG8886 [INF] Request finished in 242.6057ms 200  (15c52c40)
+2017-07-21T00:03:15.0623805+03:00 0HL6FMAUG8887 [INF] Request finished in 279.9588ms 304 text/html (15c52c40)
+2017-07-21T00:03:15.0733932+03:00 0HL6FMAUG8888 [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/13   (e5be5b71)
+2017-07-21T00:03:15.5586896+03:00 0HL6FMAUG8888 [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:03:15.7122428+03:00 0HL6FMAUG8888 [INF] Executed DbCommand (20ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:03:15.7473378+03:00 0HL6FMAUG8888 [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 330.0476ms (afa2e885)
+2017-07-21T00:03:15.8345920+03:00 0HL6FMAUG8888 [ERR] Connection id ""0HL6FMAUEN005"": An unhandled exception was thrown by the application. (8c14976b)
+System.InvalidOperationException: Cannot return null from an action method with a return type of 'Microsoft.AspNetCore.Mvc.FileStreamResult'.
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__27.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Internal.Http.Frame`1.<RequestProcessingAsync>d__2.MoveNext()
+2017-07-21T00:03:15.8405997+03:00 0HL6FMAUG8888 [INF] Request finished in 766.5767ms 500  (15c52c40)
+2017-07-21T00:03:24.4424540+03:00 0HL6FMAUG8889 [INF] Request starting HTTP/1.1 POST http://localhost:7694/api/images multipart/form-data; boundary=----WebKitFormBoundaryStgBDLCLF2rS24VA 599475 (e5be5b71)
+2017-07-21T00:03:24.5508852+03:00 0HL6FMAUG8889 [INF] Executing action method "Photohosting.Controllers.ImagesController.Post (Photohosting)" with arguments (["Microsoft.AspNetCore.Http.Internal.FormFile"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:03:24.5715596+03:00 0HL6FMAUG8889 [INF] Executed DbCommand (5ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:03:24.7354717+03:00 0HL6FMAUG8889 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ImageFile] ([ContentType], [Extension], [Name], [Status])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [ImageFile]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); (6438bdd5)
+2017-07-21T00:03:24.7816027+03:00 0HL6FMAUG8889 [INF] Executed action "Photohosting.Controllers.ImagesController.Post (Photohosting)" in 328.7442ms (afa2e885)
+2017-07-21T00:03:24.7916215+03:00 0HL6FMAUG8889 [INF] Request finished in 349.8421ms 200  (15c52c40)
+2017-07-21T00:04:08.1727913+03:00  [INF] Executed DbCommand (69ms) [Parameters=[@__adminRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__adminRoleName_0 (6438bdd5)
+2017-07-21T00:04:08.3086101+03:00  [INF] Executed DbCommand (4ms) [Parameters=[@__userRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__userRoleName_0 (6438bdd5)
+2017-07-21T00:04:08.3501687+03:00  [INF] Executed DbCommand (1ms) [Parameters=[@__adminEmail_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__adminEmail_0 (6438bdd5)
+2017-07-21T00:04:08.4299132+03:00  [INF] User profile is available. Using '"C:\Users\MikeY700\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-07-21T00:04:08.9251869+03:00 0HL6FMBEK3DD9 [INF] Request starting HTTP/1.1 DEBUG http://localhost:7694/  0 (e5be5b71)
+2017-07-21T00:04:08.9251869+03:00 0HL6FMBEK3DDA [INF] Request starting HTTP/1.1 GET http://localhost:7694/index.html   (e5be5b71)
+2017-07-21T00:04:09.1330757+03:00 0HL6FMBEK3DDA [INF] The file "/index.html" was not modified (f1f8d725)
+2017-07-21T00:04:09.1441102+03:00 0HL6FMBEK3DD9 [INF] Request finished in 259.0039ms 200  (15c52c40)
+2017-07-21T00:04:09.1761896+03:00 0HL6FMBEK3DDA [INF] Request finished in 298.8222ms 304 text/html (15c52c40)
+2017-07-21T00:04:09.1862325+03:00 0HL6FMBEK3DDB [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/13   (e5be5b71)
+2017-07-21T00:04:09.6665072+03:00 0HL6FMBEK3DDB [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:04:09.8018966+03:00 0HL6FMBEK3DDB [INF] Executed DbCommand (27ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:04:09.8550400+03:00 0HL6FMBEK3DDB [INF] Executing FileResult, sending file as "13" (3a97f597)
+2017-07-21T00:04:09.9141970+03:00 0HL6FMBEK3DDB [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 395.4643ms (afa2e885)
+2017-07-21T00:04:09.9222176+03:00 0HL6FMBEK3DDB [INF] Request finished in 736.3599ms 200 image/jpeg (15c52c40)
+2017-07-21T00:04:16.1048264+03:00 0HL6FMBEK3DDC [INF] Request starting HTTP/1.1 POST http://localhost:7694/api/images multipart/form-data; boundary=----WebKitFormBoundary3ngyqn60rRaobwvl 599475 (e5be5b71)
+2017-07-21T00:04:16.2086234+03:00 0HL6FMBEK3DDC [INF] Executing action method "Photohosting.Controllers.ImagesController.Post (Photohosting)" with arguments (["Microsoft.AspNetCore.Http.Internal.FormFile"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:04:16.2286559+03:00 0HL6FMBEK3DDC [INF] Executed DbCommand (5ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:04:16.3590023+03:00 0HL6FMBEK3DDC [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ImageFile] ([ContentType], [Extension], [Name], [Status])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [ImageFile]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); (6438bdd5)
+2017-07-21T00:04:16.3920915+03:00 0HL6FMBEK3DDC [INF] Executed action "Photohosting.Controllers.ImagesController.Post (Photohosting)" in 275.7751ms (afa2e885)
+2017-07-21T00:04:16.4001124+03:00 0HL6FMBEK3DDC [INF] Request finished in 295.6183ms 200  (15c52c40)
+2017-07-21T00:04:24.8653606+03:00 0HL6FMBEK3DDD [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/14   (e5be5b71)
+2017-07-21T00:04:24.8794074+03:00 0HL6FMBEK3DDD [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["14"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:04:24.8884235+03:00 0HL6FMBEK3DDD [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:04:24.8964453+03:00 0HL6FMBEK3DDD [INF] Executing FileResult, sending file as "14" (3a97f597)
+2017-07-21T00:04:24.9164975+03:00 0HL6FMBEK3DDD [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 37.8524ms (afa2e885)
+2017-07-21T00:04:24.9225135+03:00 0HL6FMBEK3DDD [INF] Request finished in 57.2769ms 200 image/jpeg (15c52c40)
+2017-07-21T00:04:29.9356398+03:00 0HL6FMBEK3DDE [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/15   (e5be5b71)
+2017-07-21T00:04:29.9456558+03:00 0HL6FMBEK3DDE [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["15"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:04:29.9516698+03:00 0HL6FMBEK3DDE [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:04:29.9811249+03:00 0HL6FMBEK3DDE [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 34.0681ms (afa2e885)
+2017-07-21T00:04:30.0645217+03:00 0HL6FMBEK3DDE [ERR] Connection id ""0HL6FMBEIKA5S"": An unhandled exception was thrown by the application. (8c14976b)
+System.InvalidOperationException: Cannot return null from an action method with a return type of 'Microsoft.AspNetCore.Mvc.FileStreamResult'.
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__27.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Internal.Http.Frame`1.<RequestProcessingAsync>d__2.MoveNext()
+2017-07-21T00:04:30.0705369+03:00 0HL6FMBEK3DDE [INF] Request finished in 135.7615ms 500  (15c52c40)
+2017-07-21T00:04:34.4152287+03:00 0HL6FMBEK3DDF [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/14   (e5be5b71)
+2017-07-21T00:04:34.4262561+03:00 0HL6FMBEK3DDF [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["14"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:04:34.4322725+03:00 0HL6FMBEK3DDF [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:04:34.4614348+03:00 0HL6FMBEK3DDF [INF] Executing FileResult, sending file as "14" (3a97f597)
+2017-07-21T00:04:34.5005392+03:00 0HL6FMBEK3DDF [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 72.3773ms (afa2e885)
+2017-07-21T00:04:34.5266086+03:00 0HL6FMBEK3DDF [INF] Request finished in 112.5871ms 200 image/jpeg (15c52c40)
+2017-07-21T00:05:19.6095302+03:00 0HL6FMBEK3DDG [INF] Request starting HTTP/1.1 POST http://localhost:7694/api/images multipart/form-data; boundary=----WebKitFormBoundarypALcgS4P834XLojB 1387590 (e5be5b71)
+2017-07-21T00:05:19.6928286+03:00 0HL6FMBEK3DDG [INF] Executing action method "Photohosting.Controllers.ImagesController.Post (Photohosting)" with arguments (["Microsoft.AspNetCore.Http.Internal.FormFile"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:05:19.7008492+03:00 0HL6FMBEK3DDG [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:05:19.7239098+03:00 0HL6FMBEK3DDG [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ImageFile] ([ContentType], [Extension], [Name], [Status])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [ImageFile]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); (6438bdd5)
+2017-07-21T00:05:19.7349391+03:00 0HL6FMBEK3DDG [INF] Executed action "Photohosting.Controllers.ImagesController.Post (Photohosting)" in 96.9075ms (afa2e885)
+2017-07-21T00:05:19.7399532+03:00 0HL6FMBEK3DDG [INF] Request finished in 133.4998ms 200  (15c52c40)
+2017-07-21T00:05:28.6798809+03:00 0HL6FMBEK3DDH [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/1   (e5be5b71)
+2017-07-21T00:05:28.6909114+03:00 0HL6FMBEK3DDH [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["1"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:05:28.6979285+03:00 0HL6FMBEK3DDH [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:05:28.7239584+03:00 0HL6FMBEK3DDH [INF] Executing FileResult, sending file as "1" (3a97f597)
+2017-07-21T00:05:28.7961516+03:00 0HL6FMBEK3DDH [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 104.6547ms (afa2e885)
+2017-07-21T00:05:28.8021676+03:00 0HL6FMBEK3DDH [INF] Request finished in 123.1318ms 200 image/jpeg (15c52c40)
+2017-07-21T00:05:31.1505793+03:00 0HL6FMBEK3DDI [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/1   (e5be5b71)
+2017-07-21T00:05:31.1586030+03:00 0HL6FMBEK3DDI [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["1"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:05:31.1636156+03:00 0HL6FMBEK3DDI [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:05:31.1899054+03:00 0HL6FMBEK3DDI [INF] Executing FileResult, sending file as "1" (3a97f597)
+2017-07-21T00:05:31.2370308+03:00 0HL6FMBEK3DDI [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 76.9865ms (afa2e885)
+2017-07-21T00:05:31.2420441+03:00 0HL6FMBEK3DDI [INF] Request finished in 92.5836ms 200 image/jpeg (15c52c40)
+2017-07-21T00:05:33.0403040+03:00 0HL6FMBEK3DDJ [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/2   (e5be5b71)
+2017-07-21T00:05:33.0513282+03:00 0HL6FMBEK3DDJ [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["2"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:05:33.0573304+03:00 0HL6FMBEK3DDJ [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:05:33.0834002+03:00 0HL6FMBEK3DDJ [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 31.725ms (afa2e885)
+2017-07-21T00:05:33.1024536+03:00 0HL6FMBEK3DDJ [ERR] Connection id ""0HL6FMBEIKA5T"": An unhandled exception was thrown by the application. (8c14976b)
+System.InvalidOperationException: Cannot return null from an action method with a return type of 'Microsoft.AspNetCore.Mvc.FileStreamResult'.
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__27.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Internal.Http.Frame`1.<RequestProcessingAsync>d__2.MoveNext()
+2017-07-21T00:05:33.1084771+03:00 0HL6FMBEK3DDJ [INF] Request finished in 67.8313ms 500  (15c52c40)
+2017-07-21T00:07:30.9150946+03:00  [INF] Executed DbCommand (65ms) [Parameters=[@__adminRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__adminRoleName_0 (6438bdd5)
+2017-07-21T00:07:31.0445786+03:00  [INF] Executed DbCommand (3ms) [Parameters=[@__userRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__userRoleName_0 (6438bdd5)
+2017-07-21T00:07:31.0853032+03:00  [INF] Executed DbCommand (1ms) [Parameters=[@__adminEmail_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__adminEmail_0 (6438bdd5)
+2017-07-21T00:07:31.1685432+03:00  [INF] User profile is available. Using '"C:\Users\MikeY700\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-07-21T00:07:31.6613908+03:00 0HL6FMDB1I6NA [INF] Request starting HTTP/1.1 DEBUG http://localhost:7694/  0 (e5be5b71)
+2017-07-21T00:07:31.6613908+03:00 0HL6FMDB1I6NB [INF] Request starting HTTP/1.1 GET http://localhost:7694/index.html   (e5be5b71)
+2017-07-21T00:07:31.8448798+03:00 0HL6FMDB1I6NB [INF] The file "/index.html" was not modified (f1f8d725)
+2017-07-21T00:07:31.8599202+03:00 0HL6FMDB1I6NA [INF] Request finished in 240.1772ms 200  (15c52c40)
+2017-07-21T00:07:31.8910148+03:00 0HL6FMDB1I6NB [INF] Request finished in 279.8849ms 304 text/html (15c52c40)
+2017-07-21T00:07:31.9050387+03:00 0HL6FMDB1I6NC [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/13   (e5be5b71)
+2017-07-21T00:07:32.3811115+03:00 0HL6FMDB1I6NC [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:07:32.5345703+03:00 0HL6FMDB1I6NC [INF] Executed DbCommand (21ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:07:32.5855302+03:00 0HL6FMDB1I6NC [INF] Executing FileResult, sending file as "13" (3a97f597)
+2017-07-21T00:07:32.6436845+03:00 0HL6FMDB1I6NC [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 398.4332ms (afa2e885)
+2017-07-21T00:07:32.6517062+03:00 0HL6FMDB1I6NC [INF] Request finished in 746.9357ms 200 image/jpeg (15c52c40)
+2017-07-21T00:07:38.5691165+03:00 0HL6FMDB1I6ND [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/188   (e5be5b71)
+2017-07-21T00:07:38.5831554+03:00 0HL6FMDB1I6ND [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["188"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:07:38.5974753+03:00 0HL6FMDB1I6ND [INF] Executed DbCommand (3ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:07:38.6095148+03:00 0HL6FMDB1I6ND [INF] Executing HttpStatusCodeResult, setting HTTP status code 404 (e28ccfae)
+2017-07-21T00:07:38.6125279+03:00 0HL6FMDB1I6ND [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 30.8049ms (afa2e885)
+2017-07-21T00:07:38.6185336+03:00 0HL6FMDB1I6ND [INF] Request finished in 48.7522ms 404  (15c52c40)
+2017-07-21T00:18:15.1993482+03:00  [INF] Executed DbCommand (70ms) [Parameters=[@__adminRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__adminRoleName_0 (6438bdd5)
+2017-07-21T00:18:15.3428403+03:00  [INF] Executed DbCommand (3ms) [Parameters=[@__userRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__userRoleName_0 (6438bdd5)
+2017-07-21T00:18:15.3857784+03:00  [INF] Executed DbCommand (1ms) [Parameters=[@__adminEmail_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__adminEmail_0 (6438bdd5)
+2017-07-21T00:18:15.4689927+03:00  [INF] User profile is available. Using '"C:\Users\MikeY700\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-07-21T00:18:15.9373856+03:00 0HL6FMJB1RKFN [INF] Request starting HTTP/1.1 DEBUG http://localhost:7694/  0 (e5be5b71)
+2017-07-21T00:18:15.9373856+03:00 0HL6FMJB1RKFM [INF] Request starting HTTP/1.1 GET http://localhost:7694/index.html   (e5be5b71)
+2017-07-21T00:18:16.1333744+03:00 0HL6FMJB1RKFM [INF] The file "/index.html" was not modified (f1f8d725)
+2017-07-21T00:18:16.1453989+03:00 0HL6FMJB1RKFN [INF] Request finished in 248.3289ms 200  (15c52c40)
+2017-07-21T00:18:16.1794912+03:00 0HL6FMJB1RKFM [INF] Request finished in 291.1478ms 304 text/html (15c52c40)
+2017-07-21T00:18:16.1955334+03:00 0HL6FMJB1RKFO [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/13   (e5be5b71)
+2017-07-21T00:18:16.7159192+03:00 0HL6FMJB1RKFO [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:18:16.8623068+03:00 0HL6FMJB1RKFO [INF] Executed DbCommand (19ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:18:16.9135479+03:00 0HL6FMJB1RKFO [INF] Executing FileResult, sending file as "13" (3a97f597)
+2017-07-21T00:18:16.9817278+03:00 0HL6FMJB1RKFO [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 436.5302ms (afa2e885)
+2017-07-21T00:18:16.9897491+03:00 0HL6FMJB1RKFO [INF] Request finished in 793.7048ms 200 image/jpeg (15c52c40)
+2017-07-21T00:18:25.5618509+03:00 0HL6FMJB1RKFP [INF] Request starting HTTP/1.1 GET http://localhost:7694/index.html   (e5be5b71)
+2017-07-21T00:18:25.5658612+03:00 0HL6FMJB1RKFP [INF] Sending file. Request path: '"/index.html"'. Physical path: '"d:\documents\visual studio 2017\Projects\photohosting\photohosting\wwwroot\index.html"' (27b0a520)
+2017-07-21T00:18:25.5859130+03:00 0HL6FMJB1RKFP [INF] Request finished in 22.6358ms 200 text/html (15c52c40)
+2017-07-21T00:18:25.6200159+03:00 0HL6FMJB1RKFQ [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/13   (e5be5b71)
+2017-07-21T00:18:25.6430654+03:00 0HL6FMJB1RKFQ [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:18:25.6631192+03:00 0HL6FMJB1RKFQ [INF] Executed DbCommand (5ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:18:25.6751555+03:00 0HL6FMJB1RKFQ [INF] Executing FileResult, sending file as "13" (3a97f597)
+2017-07-21T00:18:25.6931988+03:00 0HL6FMJB1RKFQ [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 52.3911ms (afa2e885)
+2017-07-21T00:18:25.7002211+03:00 0HL6FMJB1RKFQ [INF] Request finished in 78.3301ms 200 image/jpeg (15c52c40)
+2017-07-21T00:18:25.8135237+03:00 0HL6FMJB1RKFR [INF] Request starting HTTP/1.1 GET http://localhost:7694/js/jquery.min.js   (e5be5b71)
+2017-07-21T00:18:25.8155259+03:00 0HL6FMJB1RKFR [INF] Sending file. Request path: '"/js/jquery.min.js"'. Physical path: '"d:\documents\visual studio 2017\Projects\photohosting\photohosting\wwwroot\js\jquery.min.js"' (27b0a520)
+2017-07-21T00:18:25.8275567+03:00 0HL6FMJB1RKFR [INF] Request finished in 13.8978ms 200 application/javascript (15c52c40)
+2017-07-21T00:18:31.1055051+03:00 0HL6FMJB1RKFS [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/55   (e5be5b71)
+2017-07-21T00:18:31.1175387+03:00 0HL6FMJB1RKFS [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["55"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:18:31.1265615+03:00 0HL6FMJB1RKFS [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:18:31.1406119+03:00 0HL6FMJB1RKFS [INF] Executing HttpStatusCodeResult, setting HTTP status code 404 (e28ccfae)
+2017-07-21T00:18:31.1426176+03:00 0HL6FMJB1RKFS [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 26.1084ms (afa2e885)
+2017-07-21T00:18:31.1686740+03:00 0HL6FMJB1RKFS [INF] Request finished in 63.7709ms 404  (15c52c40)
+2017-07-21T00:18:36.3377499+03:00 0HL6FMJB1RKFT [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/13   (e5be5b71)
+2017-07-21T00:18:36.3487856+03:00 0HL6FMJB1RKFT [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:18:36.3578017+03:00 0HL6FMJB1RKFT [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:18:36.3658317+03:00 0HL6FMJB1RKFT [INF] Executing FileResult, sending file as "13" (3a97f597)
+2017-07-21T00:18:36.3888899+03:00 0HL6FMJB1RKFT [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 39.5058ms (afa2e885)
+2017-07-21T00:18:36.3969065+03:00 0HL6FMJB1RKFT [INF] Request finished in 58.5648ms 200 image/jpeg (15c52c40)
+2017-07-21T00:18:40.2565785+03:00 0HL6FMJB1RKFU [INF] Request starting HTTP/1.1 POST http://localhost:7694/api/images multipart/form-data; boundary=----WebKitFormBoundaryukF5t1xdBVYTHEeW 145 (e5be5b71)
+2017-07-21T00:18:40.3337839+03:00 0HL6FMJB1RKFU [INF] Executing action method "Photohosting.Controllers.ImagesController.Post (Photohosting)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:18:40.4004862+03:00 0HL6FMJB1RKFU [INF] Executed action "Photohosting.Controllers.ImagesController.Post (Photohosting)" in 133.269ms (afa2e885)
+2017-07-21T00:18:40.4911415+03:00 0HL6FMJB1RKFU [ERR] Connection id ""0HL6FMJB0B7V1"": An unhandled exception was thrown by the application. (8c14976b)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BusinessLogic.PhotoLogic.PhotoLogic.<SaveImageAsync>d__7.MoveNext() in d:\documents\visual studio 2017\Projects\photohosting\BusinessLogic\PhotoLogic\Photo.cs:line 30
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Photohosting.Controllers.ImagesController.<Post>d__5.MoveNext() in d:\documents\visual studio 2017\Projects\photohosting\photohosting\Controllers\ImagesController.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ObjectMethodExecutor.<CastToObject>d__38`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__27.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Internal.Http.Frame`1.<RequestProcessingAsync>d__2.MoveNext()
+2017-07-21T00:18:40.4961544+03:00 0HL6FMJB1RKFU [INF] Request finished in 240.4079ms 500  (15c52c40)
+2017-07-21T00:18:47.0750525+03:00 0HL6FMJB1RKFV [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/55   (e5be5b71)
+2017-07-21T00:18:47.0860823+03:00 0HL6FMJB1RKFV [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["55"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:18:47.0920983+03:00 0HL6FMJB1RKFV [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:18:47.1191703+03:00 0HL6FMJB1RKFV [INF] Executing HttpStatusCodeResult, setting HTTP status code 404 (e28ccfae)
+2017-07-21T00:18:47.1412306+03:00 0HL6FMJB1RKFV [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 36.0656ms (afa2e885)
+2017-07-21T00:18:47.1472501+03:00 0HL6FMJB1RKFV [INF] Request finished in 72.2375ms 404  (15c52c40)
+2017-07-21T00:18:52.0790102+03:00 0HL6FMJB1RKG0 [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/55   (e5be5b71)
+2017-07-21T00:18:52.0890369+03:00 0HL6FMJB1RKG0 [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["55"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:18:52.0950529+03:00 0HL6FMJB1RKG0 [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:18:52.1233785+03:00 0HL6FMJB1RKG0 [INF] Executing HttpStatusCodeResult, setting HTTP status code 404 (e28ccfae)
+2017-07-21T00:18:52.1263695+03:00 0HL6FMJB1RKG0 [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 36.4472ms (afa2e885)
+2017-07-21T00:18:52.1514362+03:00 0HL6FMJB1RKG0 [INF] Request finished in 73.1046ms 404  (15c52c40)
+2017-07-21T00:19:14.8448494+03:00 0HL6FMJB1RKG1 [INF] Request starting HTTP/1.1 POST http://localhost:7694/api/images multipart/form-data; boundary=----WebKitFormBoundaryZLyY8ysHlqbmsBLo 145 (e5be5b71)
+2017-07-21T00:19:14.8589069+03:00 0HL6FMJB1RKG1 [INF] Executing action method "Photohosting.Controllers.ImagesController.Post (Photohosting)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:19:14.9087890+03:00 0HL6FMJB1RKG1 [INF] Executed action "Photohosting.Controllers.ImagesController.Post (Photohosting)" in 51.4608ms (afa2e885)
+2017-07-21T00:19:14.9273917+03:00 0HL6FMJB1RKG1 [ERR] Connection id ""0HL6FMJB0B7V2"": An unhandled exception was thrown by the application. (8c14976b)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BusinessLogic.PhotoLogic.PhotoLogic.<SaveImageAsync>d__7.MoveNext() in d:\documents\visual studio 2017\Projects\photohosting\BusinessLogic\PhotoLogic\Photo.cs:line 30
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Photohosting.Controllers.ImagesController.<Post>d__5.MoveNext() in d:\documents\visual studio 2017\Projects\photohosting\photohosting\Controllers\ImagesController.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ObjectMethodExecutor.<CastToObject>d__38`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__27.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Internal.Http.Frame`1.<RequestProcessingAsync>d__2.MoveNext()
+2017-07-21T00:19:14.9314039+03:00 0HL6FMJB1RKG1 [INF] Request finished in 86.9409ms 500  (15c52c40)
+2017-07-21T00:19:28.1591763+03:00 0HL6FMJB1RKG2 [INF] Request starting HTTP/1.1 POST http://localhost:7694/api/images multipart/form-data; boundary=----WebKitFormBoundaryO2Zdb8zrIQlolDNN 145 (e5be5b71)
+2017-07-21T00:19:28.1913067+03:00 0HL6FMJB1RKG2 [INF] Executing action method "Photohosting.Controllers.ImagesController.Post (Photohosting)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:19:57.4232888+03:00  [INF] Executed DbCommand (68ms) [Parameters=[@__adminRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__adminRoleName_0 (6438bdd5)
+2017-07-21T00:19:57.5696854+03:00  [INF] Executed DbCommand (3ms) [Parameters=[@__userRoleName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Name]
+FROM [Roles] AS [x]
+WHERE [x].[Name] = @__userRoleName_0 (6438bdd5)
+2017-07-21T00:19:57.6168068+03:00  [INF] Executed DbCommand (1ms) [Parameters=[@__adminEmail_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__adminEmail_0 (6438bdd5)
+2017-07-21T00:19:57.7180380+03:00  [INF] User profile is available. Using '"C:\Users\MikeY700\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-07-21T00:19:58.2453034+03:00 0HL6FMK9HHR1O [INF] Request starting HTTP/1.1 DEBUG http://localhost:7694/  0 (e5be5b71)
+2017-07-21T00:19:58.2453034+03:00 0HL6FMK9HHR1N [INF] Request starting HTTP/1.1 GET http://localhost:7694/api/images/13   (e5be5b71)
+2017-07-21T00:19:58.2822855+03:00 0HL6FMK9HHR1P [INF] Request starting HTTP/1.1 POST http://localhost:7694/api/images multipart/form-data; boundary=----WebKitFormBoundaryH3SfqLK7pCcn9BW5 145 (e5be5b71)
+2017-07-21T00:19:58.4790301+03:00 0HL6FMK9HHR1O [INF] Request finished in 277.1641ms 200  (15c52c40)
+2017-07-21T00:19:59.0173924+03:00 0HL6FMK9HHR1P [INF] Executing action method "Photohosting.Controllers.ImagesController.Post (Photohosting)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:19:59.0183951+03:00 0HL6FMK9HHR1N [INF] Executing action method "Photohosting.Controllers.ImagesController.Get (Photohosting)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:20:06.2619031+03:00 0HL6FMK9HHR1P [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-07-21T00:20:06.3139616+03:00 0HL6FMK9HHR1P [INF] Executed action "Photohosting.Controllers.ImagesController.Post (Photohosting)" in 7474.1702ms (afa2e885)
+2017-07-21T00:20:06.3239761+03:00 0HL6FMK9HHR1P [INF] Request finished in 8062.4095ms 400 text/plain; charset=utf-8 (15c52c40)
+2017-07-21T00:20:06.3530530+03:00 0HL6FMK9HHR1N [INF] Executed DbCommand (32ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:20:06.4001772+03:00 0HL6FMK9HHR1N [INF] Executing FileResult, sending file as "13" (3a97f597)
+2017-07-21T00:20:06.4553244+03:00 0HL6FMK9HHR1N [INF] Executed action "Photohosting.Controllers.ImagesController.Get (Photohosting)" in 7621.0962ms (afa2e885)
+2017-07-21T00:20:06.4583324+03:00 0HL6FMK9HHR1N [INF] Request finished in 8263.8343ms 200 image/jpeg (15c52c40)
+2017-07-21T00:20:30.2689972+03:00 0HL6FMK9HHR1Q [INF] Request starting HTTP/1.1 POST http://localhost:7694/api/images multipart/form-data; boundary=----WebKitFormBoundarysNphubudW5GWDcHg 599475 (e5be5b71)
+2017-07-21T00:20:30.3261489+03:00 0HL6FMK9HHR1Q [INF] Executing action method "Photohosting.Controllers.ImagesController.Post (Photohosting)" with arguments (["Microsoft.AspNetCore.Http.Internal.FormFile"]) - ModelState is Valid (ba7f4ac2)
+2017-07-21T00:20:30.3431947+03:00 0HL6FMK9HHR1Q [INF] Executed DbCommand (5ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ContentType], [p].[Extension], [p].[Name], [p].[Status]
+FROM [ImageFile] AS [p]
+WHERE [p].[Name] = @__name_0 (6438bdd5)
+2017-07-21T00:20:30.3765940+03:00 0HL6FMK9HHR1Q [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-07-21T00:20:30.3785930+03:00 0HL6FMK9HHR1Q [INF] Executed action "Photohosting.Controllers.ImagesController.Post (Photohosting)" in 96.6827ms (afa2e885)
+2017-07-21T00:20:30.3876162+03:00 0HL6FMK9HHR1Q [INF] Request finished in 118.728ms 400 text/plain; charset=utf-8 (15c52c40)
